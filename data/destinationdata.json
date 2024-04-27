@@ -1,0 +1,13 @@
+
+
+{
+    "destinations": [
+        {"name": "Great Barrier Reef", "tag": "greatBarrierReef"},
+        {"name": "Brisbane", "tag": "brisbane"},
+        {"name": "Cairns", "tag": "cairns"},
+        {"name": "Fraser Island", "tag": "fraserIsland"},
+        {"name": "Gold Coast", "tag": "goldCoast"},
+        {"name": "Sunshine Coast", "tag": "sunshineCoast"},
+        {"name": "Whitsunday Coast", "tag": "whitsundayCoast"}
+    ]
+}

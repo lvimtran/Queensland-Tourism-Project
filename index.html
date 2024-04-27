@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="icon" href="https://s5235877.elf.ict.griffith.edu.au/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/css/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/js/owl.carousel.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="headerContent">
+            <h1>Queensland Tourism</h1>
+            <button class="burgerMenu" aria-label="Toggle navigation">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#recentView">Recent View</a></li>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li><a href="#map">Map</a></li>
+                    <li><a href="#contactUs">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- THUMBNAIL -->
+    <section class="mainThumbnail owl-carousel owl-theme">
+        <div class="carouselItem item1">
+            <p>Discover the diverse natural treasures of Queensland. Explore vibrant coral reefs teeming with marine life, marvel at ancient rainforests and breathtaking islands, bask on sun-kissed beaches, and venture into the vast outback landscapes. From bustling coastal cities to tropical paradises and scenic hinterlands, Queensland offers a world of unforgettable adventures. Immerse yourself in this extraordinary Australian state and create lasting memories amidst its natural wonders.</p>
+            <button><a href="#destinations">Explore Destinations</a></button>
+        </div>
+        <div class="carouselItem item2">
+            <p>Discover the diverse natural treasures of Queensland. Explore vibrant coral reefs teeming with marine life, marvel at ancient rainforests and breathtaking islands, bask on sun-kissed beaches, and venture into the vast outback landscapes. From bustling coastal cities to tropical paradises and scenic hinterlands, Queensland offers a world of unforgettable adventures. Immerse yourself in this extraordinary Australian state and create lasting memories amidst its natural wonders.</p>
+            <button><a href="#destinations">Explore Destinations</a></button>
+        </div>
+        <div class="carouselItem item3">
+            <p>Discover the diverse natural treasures of Queensland. Explore vibrant coral reefs teeming with marine life, marvel at ancient rainforests and breathtaking islands, bask on sun-kissed beaches, and venture into the vast outback landscapes. From bustling coastal cities to tropical paradises and scenic hinterlands, Queensland offers a world of unforgettable adventures. Immerse yourself in this extraordinary Australian state and create lasting memories amidst its natural wonders.</p>
+            <button><a href="#destinations">Explore Destinations</a></button>
+        </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <div class="destinations" id="destinations">
+        <h2 style="text-align: center; font-weight: bold">Destinations</h2>
+        <ul>
+            <li><a href="#greatBarrierReef">Great Barrier Reef</a></li>
+            <li><a href="#brisbane">Brisbane</a></li>
+            <li><a href="#cairns">Cairns</a></li>
+            <li><a href="#fraserIsland">Fraser Island</a></li>
+            <li><a href="#goldCoast">Gold Coast</a></li>
+            <li><a href="#sunshineCoast">Sunshine Coast</a></li>
+            <li><a href="#whitsundayCoast">Whitsunday Coast</a></li>
+        </ul>
+    </div>
+
+    <!-- PHOTO DISPLAY -->
+    <div id="photoDisplay"></div>
+
+    <!-- MODAL -->
+    <div class="modal" style="display: none;">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullSizePhoto" alt="">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- RECENT VIEW -->
+    <section class="recentView" id="recentView">
+        <h2>Recently Viewed</h2>
+        <div class="recentThumbnail"></div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="map" style="width: 100%,;height: 400px">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDGlu3E3I3AI2fbFfbBRPrWDfLFIBNyHvo
+        &q=Brisbane+City" frameborder="0" width="100%" height="100%"></iframe>
+    </section>
+
+    <!-- CONTACT US -->
+    <section class="contact" id="contactUs">
+        <h2>Contact Us</h2>
+        <div class="contactForm">
+                <div class="contactLeft">
+                    <input type="text" placeholder="Name"> <br>
+                    <input type="text" placeholder="Last Name"> <br>
+                    <input type="text" placeholder="Email"> <br>
+                    <input type="text" placeholder="Phone"> <br>
+                </div>
+                <div class="contactRight">
+                    <textarea cols="30" rows="10" placeholder="Message"></textarea> <br>
+                </div>
+        </div>
+        <div class="submit">
+            <button type="submit">Submit</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 – Viet My Tran Le - Queensland Tourism. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                nav:false,
+                autoplay: true,
+                responsive:{
+                    0:{
+                        items: 1
+                    }
+                }
+            })
+        });
+    </script>
+    <script src="../assignment1/js/index.js"></script>
+</body>
+</html>

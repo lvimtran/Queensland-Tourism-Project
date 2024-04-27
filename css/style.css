@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+/* HEADER */
+header{
+    background-color: #004d99ec;
+    padding: 10px 0;
+    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.headerContent{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color: rgb(216, 231, 248);
+    font-size: 32px;
+    font-weight: bold;
+}
+.burgerMenu{
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: rgb(216, 231, 248);
+    cursor: pointer;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+nav ul li{
+    margin: 0 20px;
+    background-color: #004d992c;
+}
+nav ul a{
+    text-decoration: none;
+    color: rgb(216, 231, 248);
+    font-size: 18px;
+    padding: 8px 10px;
+    border-bottom: 2px solid transparent;
+    transition: color .3s, border-bottom-color .3s;
+}
+nav ul a:hover, nav ul a:focus{
+    color:#00cdce;
+    border-bottom: 2px solid #00cdce;
+}
+
+/* FOOTER */
+footer{
+    background-color: #004d99;
+    color: white;
+    padding: 10px;
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+/* THUMBNAIL */
+.mainThumbnail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    letter-spacing: 3px;
+    color: rgb(216, 231, 248);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.carouselItem::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.carouselItem{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 760px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carouselItem.item1{
+    background-image: url('https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/images/beach.jpeg');
+}
+.carouselItem.item1 .overlay{
+    background-color: #3333338b;
+}
+
+.carouselItem.item2{
+    background-image: url('https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/images/mountain.jpeg');
+}
+
+.carouselItem.item3{
+    background-image: url('https://s5235877.elf.ict.griffith.edu.au/2702ICT/assignment1/images/themepark.jpeg');
+}
+
+.carouselItem p{
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    margin: 40px 60px 40px 40px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.carouselItem button{
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #004d99;
+    color: rgb(216, 231, 248);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: background-color .3 ease;
+    z-index: 2;
+}
+
+.carouselItem button a{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(216, 231, 248);
+}
+.carouselItem button:hover{
+    background-color: #00cdce;
+    color: #004d99;
+}
+.owl-dots{
+    display: none;
+}
+
+
+/* DESTINATIONS */
+#destinations ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#destinations ul li{
+    padding: 10px;
+    background-color: rgb(216, 231, 248);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#destinations ul li a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* PHOTO DISPLAY */
+#photoDisplay img.thumbnail{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1050;
+}
+
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* RECENTVIEW */
+.recentView{
+    padding: 20px;
+    background-color: rgb(216, 231, 248);
+}
+.recentView h2{
+    text-align: center;
+}
+
+/* CONTACT US */
+.contact{
+    padding: 20px;
+}
+.contact h2{
+    text-align: center;
+}
+.contactForm{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.contactLeft, .contactRight{
+    flex: 1;
+    padding: 10px;
+}
+.contactLeft input, .contactRight textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.submit button{
+    width: 20%;
+    padding: 10px;
+    align-items: center;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* BREAKPOINTS */
+@media (min-width: 1024px){
+    .destinations ul, .recentView ul, #photoDisplay{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 1024px){
+    .burgerMenu{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #004d99ec;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li{
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul a{
+        padding: 10px;
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .destinations ul, .recentView ul, #photoDisplay{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 767px){
+    .destinations ul, .recentView ul, #photoDisplay{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
